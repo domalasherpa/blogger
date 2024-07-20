@@ -1,0 +1,237 @@
+{
+	"posts": [
+		{
+			"id": 1,
+			"title": "First Post",
+			"author": {
+				"id": 1,
+				"username": "john_doe",
+				"fullName": "John Doe",
+				"email": "john.doe@example.com",
+				"avatar": "https://cdn.pixabay.com/photo/2024/01/20/12/12/ai-generated-8520972_1280.png",
+				"bio": "Frontend Developer and Blogger"
+			},
+			"content": "This is the content of the first post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+			"date": "2024-07-16",
+			"comments": [
+				{
+					"id": 1,
+					"user": {
+						"id": 1,
+						"username": "john_doe",
+						"fullName": "John Doe",
+						"email": "john.doe@example.com",
+						"avatar": "https://cdn.pixabay.com/photo/2024/01/20/12/12/ai-generated-8520972_1280.png",
+						"bio": "Frontend Developer and Blogger"
+					},
+					"content": "Great post!",
+					"date": "2024-07-17"
+				},
+				{
+					"id": 2,
+					"user": {
+						"id": 3,
+						"username": "alex_wong",
+						"fullName": "Alex Wong",
+						"email": "alex.wong@example.com",
+						"avatar": "https://cdn.pixabay.com/photo/2016/06/20/04/30/asian-man-1468032_1280.jpg",
+						"bio": "Photographer and Foodie"
+					},
+					"content": "Interesting read.",
+					"date": "2024-07-18"
+				}
+			]
+		},
+		{
+			"id": 2,
+			"title": "Second Post",
+			"author": {
+				"id": 2,
+				"username": "jane_smith",
+				"fullName": "Jane Smith",
+				"email": "jane.smith@example.com",
+				"avatar": "https://cdn.pixabay.com/photo/2021/02/22/16/34/portrait-6040876_1280.jpg",
+				"bio": "Designer and Travel Enthusiast"
+			},
+			"content": "This is the content of the second post. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+			"date": "2024-07-18",
+			"comments": [
+				{
+					"id": 3,
+					"user": {
+						"id": 1,
+						"username": "john_doe",
+						"fullName": "John Doe",
+						"email": "john.doe@example.com",
+						"avatar": "https://cdn.pixabay.com/photo/2024/01/20/12/12/ai-generated-8520972_1280.png",
+						"bio": "Frontend Developer and Blogger"
+					},
+					"content": "Thanks for sharing!",
+					"date": "2024-07-19"
+				}
+			]
+		}
+	],
+
+	"users": [
+		{
+			"id": 1,
+			"username": "john_doe",
+			"fullName": "John Doe",
+			"avatar": "https://cdn.pixabay.com/photo/2024/01/20/12/12/ai-generated-8520972_1280.png",
+			"bio": "Frontend Developer and Blogger",
+			"nFollowers": 2,
+			"nFollowing": 1,
+			"followers": [
+				{
+					"id": 2,
+					"username": "demo_user2",
+					"name": "Jane Smith",
+					"avatar": "https://cdn.pixabay.com/photo/2024/07/12/17/00/ai-generated-8890751_1280.png",
+					"bio": "Travel blogger with a passion for photography."
+				},
+				{
+					"id": 3,
+					"username": "demo_user3",
+					"name": "Emily Brown",
+					"avatar": "https://cdn.pixabay.com/photo/2024/04/12/15/46/beautiful-8692180_1280.png",
+					"bio": "Foodie and recipe sharer."
+				}
+			],
+			"following": [
+				{
+					"id": 2,
+					"username": "demo_user2",
+					"name": "Jane Smith",
+					"avatar": "https://cdn.pixabay.com/photo/2024/04/12/15/46/beautiful-8692180_1280.png",
+					"bio": "Travel blogger with a passion for photography."
+				}
+			],
+			"posts": [
+				{
+					"id": 1,
+					"title": "First Post",
+					"author": {
+						"id": 1,
+						"username": "john_doe",
+						"fullName": "John Doe",
+						"email": "john.doe@example.com",
+						"avatar": "https://cdn.pixabay.com/photo/2024/01/20/12/12/ai-generated-8520972_1280.png",
+						"bio": "Frontend Developer and Blogger"
+					},
+					"content": "This is the content of the first post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+					"date": "2024-07-16",
+					"comments": [
+						{
+							"id": 1,
+							"user": {
+								"id": 1,
+								"username": "john_doe",
+								"fullName": "John Doe",
+								"email": "john.doe@example.com",
+								"avatar": "https://cdn.pixabay.com/photo/2024/01/20/12/12/ai-generated-8520972_1280.png",
+								"bio": "Frontend Developer and Blogger"
+							},
+							"content": "Great post!",
+							"date": "2024-07-17"
+						},
+						{
+							"id": 2,
+							"user": {
+								"id": 3,
+								"username": "alex_wong",
+								"fullName": "Alex Wong",
+								"email": "alex.wong@example.com",
+								"avatar": "https://cdn.pixabay.com/photo/2016/06/20/04/30/asian-man-1468032_1280.jpg",
+								"bio": "Photographer and Foodie"
+							},
+							"content": "Interesting read.",
+							"date": "2024-07-18"
+						}
+					]
+				},
+				{
+					"id": 2,
+					"title": "Second Post",
+					"author": {
+						"id": 2,
+						"username": "john_doe",
+						"fullName": "John Doe",
+						"email": "john.doe@example.com",
+						"avatar": "https://cdn.pixabay.com/photo/2024/01/20/12/12/ai-generated-8520972_1280.png",
+						"bio": "Designer and Travel Enthusiast"
+					},
+					"content": "This is the content of the second post. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+					"date": "2024-07-18",
+					"comments": [
+						{
+							"id": 3,
+							"user": {
+								"id": 1,
+								"username": "john_doe",
+								"fullName": "John Doe",
+								"email": "john.doe@example.com",
+								"avatar": "https://cdn.pixabay.com/photo/2024/01/20/12/12/ai-generated-8520972_1280.png",
+								"bio": "Frontend Developer and Blogger"
+							},
+							"content": "Thanks for sharing!",
+							"date": "2024-07-19"
+						}
+					]
+				}
+
+			]
+		},
+		{
+			"id": 3,
+			"username": "alex_wong",
+			"fullName": "Alex Wong",
+			"avatar": "https://cdn.pixabay.com/photo/2016/06/20/04/30/asian-man-1468032_1280.jpg",
+			"bio": "Photographer and Foodie",
+			"nFollowers": 3,
+			"nFollowing": 1,
+			"followers": [
+				{
+					"id": 2,
+					"username": "demo_user2",
+					"name": "Jane Smith",
+					"avatar": "https://example.com/avatar2.png",
+					"bio": "Travel blogger with a passion for photography."
+				},
+				{
+					"id": 3,
+					"username": "demo_user3",
+					"name": "Emily Brown",
+					"avatar": "https://example.com/avatar3.png",
+					"bio": "Foodie and recipe sharer."
+				},
+				{
+					"id": 4,
+					"username": "demo_user4",
+					"name": "Emily Brown",
+					"avatar": "https://example.com/avatar3.png",
+					"bio": "Foodie and recipe sharer."
+				}
+			],
+			"following": [
+				{
+					"id": 2,
+					"username": "demo_user2",
+					"name": "Jane Smith",
+					"avatar": "https://example.com/avatar2.png",
+					"bio": "Travel blogger with a passion for photography."
+				}
+			]
+		},
+		{
+			"id": 2,
+			"username": "jane_smith",
+			"fullName": "Jane Smith",
+			"email": "jane.smith@example.com",
+			"avatar": "https://cdn.pixabay.com/photo/2021/02/22/16/34/portrait-6040876_1280.jpg",
+			"bio": "Designer and Travel Enthusiast",
+			"nFollowers": 0,
+			"nFollowing": 0
+		}
+	]
+}
