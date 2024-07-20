@@ -1,8 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 import UserProfile from "./UserProfile";
+import Comment from "./Comment";
 
-
-export default function BlogPost(){
+export default function BlogPost() {
   const { title, content, author, date, comments } = useLoaderData();
 
   return (
@@ -13,7 +13,7 @@ export default function BlogPost(){
           {/* <p>
             <i>Author : {author.username}</i>
           </p> */}
-          <UserProfile user={author} date= {date}/>
+          <UserProfile user={author} date={date} />
         </section>
 
         <section className="blog-content mb-2 text-sm text-zinc-200">
@@ -24,19 +24,17 @@ export default function BlogPost(){
       <section className="nlog-comment bg-white text-gray-600 p-3 text-xs rounded-md">
         <h3 className="font-bold text-sm mb-2">Comments</h3>
         <div>
-          {comments.map(comment => (
-            <div key={comment.id} className="mb-2 bg-slate-200 p-2 rounded-lg">
-              <p><strong>{comment.user.username}</strong> - {comment.content}</p>
-              <p><i className="text-xs">{comment.date}</i></p>
-            </div>
-          ))}
+          {comments &&
+            comments.map((comment) => (
+              <Comment
+                user={comment.user}
+                date={comment.date}
+                content={comment.content}
+                key={comment.id}
+              />
+            ))}
         </div>
       </section>
-      
-      
     </article>
   );
 }
-
-
-
