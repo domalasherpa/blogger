@@ -1,6 +1,8 @@
 import User from "../components/User";
+import About from "../components/About";
 import userLoader from "../components/loaders/userLoader";
 import UserLayout from "../layout/UserLayout";
+import Followers from "../components/Followers";
 
 const UserRoute = [
     {
@@ -14,12 +16,12 @@ const UserRoute = [
                 element: <User />
             },
             {
-                path: "about",
+                path: "about",                  //todo
                 element: <About />
             },
             {
-                path: "following",
-                element: <Following />
+                path: "followers",              //todo
+                element: <Followers />
             }
         ],
     }
