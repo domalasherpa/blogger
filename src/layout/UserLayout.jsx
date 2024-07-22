@@ -1,6 +1,6 @@
 import { Link, Outlet, useLoaderData } from "react-router-dom";
 import Avatar from "../components/users/Avatar";
-import Following from "../components/Following";
+import FollowingSide from "../components/FollowingSide";
 
 export default function UserLayout() {
     const {
@@ -8,7 +8,8 @@ export default function UserLayout() {
         username,
         following,
         bio,
-        nFollowers
+        nFollowers,
+        nFollowing
       } = useLoaderData();
   return (
     <div className="max-[820px]:flex-col-reverse flex w-full justify-between gap-4">
@@ -36,8 +37,13 @@ export default function UserLayout() {
             <h1 className="text-sm mb-2">Following</h1>
             <div>
               {following.map((user) => (
-                <Following follower={user} key={user.id} />
+                <FollowingSide follower={user} key={user.id} />
               ))}
+            </div>
+            <div className="text-xs flex justify-end mt-2">
+              {
+                nFollowing > 5 && <p className="text-slate-200 underline"><Link to={`/@${username}/following`}>See More</Link></p>
+              }
             </div>
           </div>
         )}
