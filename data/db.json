@@ -86,14 +86,14 @@
 				{
 					"id": 2,
 					"username": "demo_user2",
-					"name": "Jane Smith",
+					"fullName": "Jane Smith",
 					"avatar": "https://cdn.pixabay.com/photo/2024/07/12/17/00/ai-generated-8890751_1280.png",
 					"bio": "Travel blogger with a passion for photography."
 				},
 				{
 					"id": 3,
 					"username": "demo_user3",
-					"name": "Emily Brown",
+					"fullName": "Emily Brown",
 					"avatar": "https://cdn.pixabay.com/photo/2024/04/12/15/46/beautiful-8692180_1280.png",
 					"bio": "Foodie and recipe sharer."
 				}
@@ -102,7 +102,7 @@
 				{
 					"id": 2,
 					"username": "demo_user2",
-					"name": "Jane Smith",
+					"fullName": "Jane Smith",
 					"avatar": "https://cdn.pixabay.com/photo/2024/04/12/15/46/beautiful-8692180_1280.png",
 					"bio": "Travel blogger with a passion for photography."
 				}
@@ -194,21 +194,21 @@
 				{
 					"id": 2,
 					"username": "demo_user2",
-					"name": "Jane Smith",
+					"fullName": "Jane Smith",
 					"avatar": "https://cdn.pixabay.com/photo/2024/07/12/17/00/ai-generated-8890751_1280.png",
 					"bio": "Travel blogger with a passion for photography."
 				},
 				{
 					"id": 3,
 					"username": "demo_user3",
-					"name": "Emily Brown",
+					"fullName": "Emily Brown",
 					"avatar": "https://cdn.pixabay.com/photo/2023/08/21/01/24/ai-generated-8203396_1280.jpg",
 					"bio": "Foodie and recipe sharer."
 				},
 				{
 					"id": 4,
 					"username": "demo_user4",
-					"name": "Emily Brown",
+					"fullName": "Emily Brown",
 					"avatar": "https://cdn.pixabay.com/photo/2024/06/26/22/46/ai-generated-8855994_1280.jpg",
 					"bio": "Foodie and recipe sharer."
 				}
@@ -217,7 +217,7 @@
 				{
 					"id": 2,
 					"username": "demo_user2",
-					"name": "Jane Smith",
+					"fullName": "Jane Smith",
 					"avatar": "https://cdn.pixabay.com/photo/2024/07/12/17/00/ai-generated-8890751_1280.png",
 					"bio": "Travel blogger with a passion for photography."
 				}
