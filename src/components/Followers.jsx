@@ -5,11 +5,12 @@ import { useRouteLoaderData , Link} from "react-router-dom";
 export default function Followers(){
     const {followers} = useRouteLoaderData("user");
     return (
-        <div>
+        <div className="text-xs my-2">
             {
-                followers && followers.map(follower=>(
+                followers ? followers.map(follower=>(
                     <Follower avatar={follower.avatar} fullName={follower.fullName} bio={follower.bio} key={follower.id} username={follower.username}/>
                 ))
+                : <p>No followers</p>
             }
         </div>
     )
