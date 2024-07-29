@@ -14,6 +14,7 @@ export default function Login(){
         if(localStorage.getItem(ACCESS_TOKEN)){ //user already logged in
             navigate('/');
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const onSubmit = async (e)=>{
