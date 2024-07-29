@@ -6,17 +6,40 @@ import ErrorRoute from "./ErrorRoute";
 import HomeRoute from "./HomeRoute";
 import UserRoute from "./UserRoute";
 
+import Login from "../components/Login";
+import Register from '../components/Register';
+import ProtectedRoute from "../components/ProtectedRoute";
+
 const RootRoute = createBrowserRouter([
     {
         path: '/',
-        element: <RootLayout />,
+        element: <ProtectedRoute><RootLayout /></ProtectedRoute>,
         children:[
             ...HomeRoute,
             ...ProfileRoute,
             ...BlogsRoute,
             ...ErrorRoute,
-            ...UserRoute
+            ...UserRoute,
+            
         ]
+    },
+    {
+        path: '/login',
+        element: <Login />
+    },
+    {
+        path: '/register',
+        element: <Register />
+    },
+    {
+        path: '/signout',
+        element: (
+            <>
+                {
+                    localStorage.clear()
+                }
+            </>
+        )
     }
 ]);
 
