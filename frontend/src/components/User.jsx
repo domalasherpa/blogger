@@ -7,8 +7,8 @@ export default function User() {
     return (
         <div className="my-5 text-xs">
             {
-                user.posts ? (
-                    user.posts.map((blog) => <Blog post={blog} key={blog.id} />)
+                user.blogs.length > 0 ? (
+                    user.blogs.map((blog) => <Blog post={blog} key={blog.id} />)
                 ) : (
                     <p>Have not posted anything.</p>
                 )

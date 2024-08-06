@@ -1,16 +1,16 @@
+import api from "../../utils/api";
+
 const userLoader = async({ params })=>{
     let {username} = params;
     username = username.replace(/^@/,'');
-    const res = await fetch(`http://localhost:4000/users/?username=${username}`);
+    const res = await api.get(`user/${username}`);
 
-
-    if(!res.ok){
+    if(res.status !== 200){
         throw new Error("Unable to fetch the user");
     }
 
-    const data = await res.json();
-    console.log(data);
-    return data[0];
+    return res.data.user;
+
 }
 
 export default userLoader;

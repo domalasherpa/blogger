@@ -1,9 +1,10 @@
 import Home from "../components/Home";
+import ProtectedRoute from "../components/ProtectedRoute";
 
 const HomeRoute = [
     {
         path: '/',
-        element: <Home />
+        element: <ProtectedRoute><Home /></ProtectedRoute>
     }
 ];
 

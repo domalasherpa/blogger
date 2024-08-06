@@ -1,12 +1,14 @@
 import { useLoaderData } from 'react-router-dom';
 import Blog from './Blog'; 
+import api from "../utils/api";
+
 export default function Blogs(){
-  const posts = useLoaderData();
+  const blogs = useLoaderData();
   return (
     <div className="blogs">
       <h1 className="text-lg">Blogs</h1>
-      {posts.map(post=> (
-        <Blog key={post.id} post={post} />
+      {blogs.map(blog=> (
+        <Blog key={blog._id} post={blog} />
       ))}
     </div>
   );
@@ -15,13 +17,12 @@ export default function Blogs(){
 
 const blogsLoader = async()=>{
   try {
-    const response = await fetch('http://localhost:4000/posts');
+    const response = await api.get('/blog');
 
-    if (!response.ok) {
+    if (response.status !== 200) {
       throw new Error('Failed to fetch blog posts');
     }
-
-    return response.json();
+    return response.data.blogs ?? [];
   } catch (error) {
     console.error('Error fetching blog posts:', error);
     throw error; 

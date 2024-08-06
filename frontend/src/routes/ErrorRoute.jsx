@@ -1,9 +1,10 @@
 import ErrorPage from  "../components/ErrorPage";
+import ProtectedRoute from "../components/ProtectedRoute";
 
 const errorRoutes = [
     {
         path: '*',
-        element: <ErrorPage />
+        element: <ProtectedRoute><ErrorPage /></ProtectedRoute>
     }
 ];
 

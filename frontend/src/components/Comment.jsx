@@ -14,6 +14,5 @@ export default function Comment({user, date, content}){
             </div>
             <p>{content}</p>
         </div>
-
     )
 }

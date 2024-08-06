@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import api from '../utils/api';
 import { ACCESS_TOKEN, REFRESH_TOKEN } from "../utils/constants";
 import { useNavigate } from "react-router-dom";
+import Logo from "./Logo";
 
 export default function Login(){
 
@@ -43,7 +44,8 @@ export default function Login(){
     loading && <p>Loading...</p>
 
     return (
-        <form className="text-black p-4 bg-slate-200 text-xs">
+        <form className="text-black p-4 bg-gray-500 text-xs max-w-80 h-fit">
+            <Logo />
             <label htmlFor="email">Email: </label>
             <input 
                 type="email" 
@@ -65,7 +67,7 @@ export default function Login(){
             <button 
                 type="submit" 
                 onClick={(e)=>{onSubmit(e)}}
-                className=" p-1 rounded-sm hover:bg-blue-600 hover:text-gray-100 bg-blue-500 cursor-pointer text-gray-200 "    
+                className=" p-1 rounded-sm hover:bg-gray-400 hover:text-gray-100 bg-gray-600 cursor-pointer text-gray-200 "    
             >Log In</button>
         </form>
     )

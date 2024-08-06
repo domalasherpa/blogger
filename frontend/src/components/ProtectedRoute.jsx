@@ -10,11 +10,16 @@ export default function ProtectedRoute({children}){
     
 
     useEffect(()=>{
-       
-        auth().catch(()=>setIsAuthorized(false));
+        const verifyAuth = async () => {
+            try {
+                await auth();
+            } catch {
+                setIsAuthorized(false);
+            }
+        };
+        verifyAuth();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
-
 
     const refreshToken = async()=>{
         const refreshToken = localStorage.getItem(REFRESH_TOKEN);
@@ -66,6 +71,7 @@ export default function ProtectedRoute({children}){
         return <div>loading...</div>
     }
 
+    
     return ( isAuthorized ? children : <Navigate to='/login' />); 
 
 

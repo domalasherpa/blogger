@@ -4,29 +4,30 @@ import userLoader from "../components/loaders/userLoader";
 import UserLayout from "../layout/UserLayout";
 import Followers from "../components/Followers";
 import Following from "../components/Following";
+import ProtectedRoute from "../components/ProtectedRoute";
 
 const UserRoute = [
     {
         path: "/:username",
-        element: <UserLayout />,
+        element: <ProtectedRoute><UserLayout /></ProtectedRoute>,
         loader: userLoader,
         id: "user",
         children: [
             {
                 path: "",
-                element: <User />
+                element: <ProtectedRoute><User /></ProtectedRoute>
             },
             {
                 path: "about",                  
-                element: <About />
+                element: <ProtectedRoute><About /></ProtectedRoute>
             },
             {
                 path: "followers",              
-                element: <Followers />
+                element: <ProtectedRoute><Followers /></ProtectedRoute>
             },
             {
                 path: "following",
-                element: <Following />
+                element: <ProtectedRoute><Following /></ProtectedRoute>
             }
         ],
     }

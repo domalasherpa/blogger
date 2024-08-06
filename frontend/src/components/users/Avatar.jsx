@@ -1,4 +1,4 @@
-const Avatar = ({ imageUrl, altText , className=""}) => {
+const Avatar = ({ imageUrl="/src/assets/avatar.png", altText , className=""}) => {
     return (<img
         src={imageUrl}
         alt={altText}
