@@ -7,9 +7,10 @@ configDotenv();
 
 function generateAccessToken(user){
         const payload = {
-            id: user.id,
-            email: user.email
-        };
+            id: user._id,
+            email: user.email,
+            role: user.role || 'user'
+        }
 
         const secret = process.env.SECRET_KEY;
         const options = { expiresIn: '1h' };
@@ -31,8 +32,9 @@ function verifyAccessToken(token){
 
 function generateRefreshToken(user){
     const payload = {
-        id: user.id,
-        email: user.email
+        id: user._id,
+        email: user.email,
+        role: user.role || 'user'
     }
 
     const secret = process.env.SECRET_KEY;

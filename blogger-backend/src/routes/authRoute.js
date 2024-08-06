@@ -4,25 +4,8 @@ import { auth } from "../controller/auth.js";
 
 const authRoute = Router();
 
-authRoute.get('/', (req, res)=>{
-    res.send('hello');
-})
-
-authRoute.get('/register', (req, res)=>{ //regiter
-     res.send('sucessfully registered.');
-});
-
-
-authRoute.get('/token', async(req, res)=>{ ///login
-
-    const data = await testJWT();
-    console.log(data);
-
-    return res.json({success: true, data: data});
-});
-
-
 authRoute.post('/login', auth.login);
+authRoute.post('/register', auth.register);
 
 authRoute.post('/token/refresh', (req, res)=>{ //revive the expried accesstoken
     const refreshToken = req.body.refreshToken;

@@ -1,7 +1,7 @@
 import User from "./models/User.js";
 import conn from './db.js';
-import { Blog } from "./models/Blogs.js";
-import { Comment } from "./models/Comment.js";
+import Blog  from "./models/Blogs.js";
+import Comment from "./models/Comment.js";
 import mongoose from "mongoose";
 import {generateAccessToken, generateRefreshToken} from "./controller/token.js";
 

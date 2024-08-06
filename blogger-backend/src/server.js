@@ -1,9 +1,13 @@
 //imports
 import { configDotenv } from 'dotenv';
 import express from 'express';
-import authRoute from "./routes/authRoute.js";
 import conn from './db.js';
 import cors from 'cors';
+
+//routes import
+import authRoute from "./routes/authRoute.js";
+import blogRoute from "./routes/blogRoute.js";
+import userRoute from './routes/userRoute.js';
 
 //server
 configDotenv();
@@ -15,6 +19,8 @@ const port = process.env.PORT || 4000;
 server.use(express.json());
 server.use(cors())
 server.use('/', authRoute);
+server.use('/blog', blogRoute);
+server.use('/user', userRoute);
 // server.get('/', (req, res)=>{
 //     res.send('hello world');
 // })

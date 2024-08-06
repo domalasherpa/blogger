@@ -1,4 +1,6 @@
-function authenticationToken(req, res, next){ // check if the request contains the valid token or not.
+import {verifyAccessToken} from "../controller/token.js";
+
+export default function authenticationToken(req, res, next){ // check if the request contains the valid token or not.
     const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1];  //authheader: BEARER token
 
@@ -7,7 +9,7 @@ function authenticationToken(req, res, next){ // check if the request contains t
     }
     const result  = verifyAccessToken(token);
 
-    if(!result.sucess){
+    if(!result.success){
         return res.status(403).json({ error: result.error });
     }
 
